@@ -27,9 +27,9 @@ public class fragmentMyChildren extends Fragment {
 
 
         exampleList = new ArrayList<>();
-        exampleList.add(new myChildrenItem(R.drawable.profile, "Line 1", "Line 2" ));
-        exampleList.add(new myChildrenItem(R.drawable.profile, "Line 3", "Line 4" ));
-        exampleList.add(new myChildrenItem(R.drawable.profile, "Line 5", "Line 6" ));
+        exampleList.add(new myChildrenItem(R.drawable.child3, "John Rider", "Grade 2 South", "At School"));
+        exampleList.add(new myChildrenItem(R.drawable.child1, "Samantha Rider", "Class 8 East", "In Bus"));
+        exampleList.add(new myChildrenItem(R.drawable.child2, "Ryan Rider", "Grade 4 North", "At Home"));
 
 
         mRecyclerView = myView.findViewById(R.id.recyclerView);
