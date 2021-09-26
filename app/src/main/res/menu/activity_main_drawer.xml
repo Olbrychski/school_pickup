@@ -12,20 +12,14 @@
             android:id="@+id/nav_guardian_profile"
             android:icon="@drawable/ic_guardian_profile"
             android:title="@string/menu_guardian_profile" />
-        <item
-            android:id="@+id/nav_edit_location"
-            android:icon="@drawable/ic_edit_location"
-            android:title="@string/menu_edit_Location" />
+
 
         <item
             android:id="@+id/nav_settings"
             android:icon="@drawable/ic_settings"
             android:title="@string/menu_settings" />
 
-        <item
-            android:id="@+id/nav_about_school"
-            android:icon="@drawable/ic_about_school"
-            android:title="@string/menu_about_school" />
+
 
         <item
             android:id="@+id/nav_contact_us"
