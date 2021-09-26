@@ -11,10 +11,23 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="monospace"
+            android:text="Contact Us"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:weightSum="2">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -23,30 +36,19 @@
 
                 <ImageView
                     android:id="@+id/logo_bus"
-                    android:layout_width="150dp"
+                    android:layout_width="250dp"
                     android:layout_height="match_parent"
-                    android:src="@drawable/ic_bus"
-                    app:tint="@color/primary" />
+                    android:src="@drawable/contact_us" />
 
                 <TextView
                     android:id="@+id/text1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="28dp"
+                    android:layout_centerInParent="true"
                     android:layout_toRightOf="@id/logo_bus"
                     android:text="Need Help?"
                     android:textColor="@color/black"
-                    android:textSize="30sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/text1"
-                    android:layout_marginLeft="27dp"
-                    android:layout_toRightOf="@id/logo_bus"
-                    android:text="Eastleigh High School"
-                    android:textColor="@color/black"
-                    android:textSize="20sp" />
+                    android:textSize="23dp" />
 
 
             </RelativeLayout>
@@ -55,9 +57,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/text1"
-                android:layout_marginLeft="27dp"
                 android:layout_toRightOf="@id/logo_bus"
                 android:text="Connect with us"
+                android:layout_gravity="center_horizontal"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 

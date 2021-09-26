@@ -3,6 +3,11 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
 
       <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <style name="AppTheme.NavigationView" >
+
+        <item name="android:textColorSecondary">@color/dark_grey</item>
 
     </style>
 
