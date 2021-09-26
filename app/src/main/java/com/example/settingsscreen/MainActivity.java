@@ -96,16 +96,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_guardian_profile:
                 fragment = new fragmentGuardianProfile();
                 break;
-            case R.id.nav_edit_location:
-                fragment = new fragmentEditLocations();
-                break;
             case R.id.nav_settings:
                 fragment = new fragmentSettings();
                 break;
 
-            case R.id.nav_about_school:
-                fragment = new fragmentAboutSchool();
-                break;
             case R.id.nav_contact_us:
                 fragment = new fragmentContactUs();
                 break;
