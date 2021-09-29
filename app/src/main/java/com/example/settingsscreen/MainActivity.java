@@ -104,6 +104,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 fragment = new fragmentContactUs();
                 break;
 
+            case R.id.nav_history:
+                fragment = new FragmentHistory();
+                break;
+
+
         }
 
         //replacing the fragment
