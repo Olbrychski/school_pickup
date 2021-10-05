@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/white"
+    android:background="#F6F0DA"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -15,37 +15,37 @@
         android:layout_alignParentTop="true"
         android:layout_above="@+id/card">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:orientation="vertical">
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Monday"
-            android:fontFamily="monospace"
-            android:textAllCaps="true"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="15dp"
-            android:textSize="20dp"/>
+            android:background="@color/primary"
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="2:00 pm"
-            android:fontFamily="monospace"
-            android:textAllCaps="false"
-            android:textStyle="bold"
-            android:textColor="@color/grey"
-            android:layout_marginLeft="20dp"
-            android:layout_marginBottom="20dp"
-            android:textSize="14dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="monospace"
+                android:text="Monday"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="monospace"
+                android:text="2:00 pm"
+                android:textAllCaps="false"
+                android:textColor="@color/grey"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
@@ -68,6 +68,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="4dp"
+        android:layout_marginTop="10dp"
         android:background="@color/primary"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
@@ -92,7 +93,7 @@
                     android:layout_weight="0.5"
                     android:src="@drawable/ic_game_arrows"
                     android:layout_gravity="center_vertical"
-                    app:tint="#B3FFFFFF" />
+                    app:tint="@color/light_grey" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -132,7 +133,7 @@
                 android:layout_height="wrap_content"
                 android:text="Play"
                 android:backgroundTint="@color/white"
-                android:textColor="@color/black"
+                android:textColor="@color/primary"
                 android:textAllCaps="false"
                 android:layout_marginTop="-10dp"
                 android:layout_gravity="center_horizontal"/>

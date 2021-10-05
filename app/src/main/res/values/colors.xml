@@ -9,6 +9,7 @@
 
     <color name="white_background">#FAFAF9</color>
     <color name="primary">#FECE2F</color>
+    <color name="primary_light">#99FECE2F</color>
     <color name="primary_dark">#C6580F</color>
     <color name="black">#231F1D</color>
     <color name="grey">#b4aea2</color>
