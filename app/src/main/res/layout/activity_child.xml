@@ -4,7 +4,7 @@
     android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/primary_light"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:paddingTop="20dp"
         android:paddingBottom="10dp"
-        android:background="@color/white"
+        android:background="@color/primary"
         android:orientation="horizontal"
         android:weightSum="3">
 
@@ -35,6 +35,8 @@
             android:layout_weight="2"
             android:gravity="center_horizontal"
             android:text=" Smith Kamau"
+            android:fontFamily="sans-serif"
+            android:textSize="14dp"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
@@ -61,8 +63,8 @@
         android:background="@drawable/tab_layout_background"
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:tabTextColor="@color/grey"
-        app:tabIndicatorColor="@color/primary"
+        app:tabTextColor="@color/dark_grey"
+        app:tabIndicatorColor="@color/white"
         />
 
 

@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="#F6F0DA"
-    android:orientation="vertical">
+    android:background="@color/primary_light"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_above="@+id/card">
+        android:layout_above="@+id/card"
+        android:layout_alignParentTop="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -49,9 +48,9 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
-            android:layout_alignParentEnd="true"
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
             android:layout_gravity="right"
             android:layout_marginTop="20dp"
             android:layout_marginRight="15dp"
@@ -59,68 +58,68 @@
             app:civ_border_color="#FF000000"
             app:civ_border_width="0dp" />
 
-</RelativeLayout>
-
+    </RelativeLayout>
 
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="4dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/primary"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="15dp"
-        android:layout_marginBottom="15dp">
+        android:layout_marginBottom="15dp"
+        android:background="@color/primary"
+        app:cardCornerRadius="4dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:background="@color/primary">
+            android:background="@color/primary"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_margin="15dp"
+                android:orientation="horizontal"
                 android:weightSum="2">
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="0.5"
                     android:src="@drawable/ic_game_arrows"
-                    android:layout_gravity="center_vertical"
                     app:tint="@color/light_grey" />
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_weight="1.5"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:fontFamily="sans-serif"
                         android:text="Games"
                         android:textAllCaps="true"
-                        android:textStyle="bold"
                         android:textColor="@color/black"
-                        android:layout_marginLeft="15dp"
-                        android:textSize="20dp"/>
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
 
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="sans-serif"
                         android:text="Play intresting games and get to compete with other kids"
                         android:textColor="#515150"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginLeft="15dp"
-                        android:textSize="12dp"/>
-
+                        android:textSize="12dp" />
 
 
                 </LinearLayout>
@@ -131,12 +130,13 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Play"
-                android:backgroundTint="@color/white"
-                android:textColor="@color/primary"
-                android:textAllCaps="false"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="-10dp"
-                android:layout_gravity="center_horizontal"/>
+                android:backgroundTint="@color/white"
+                android:fontFamily="sans-serif"
+                android:text="Play"
+                android:textAllCaps="false"
+                android:textColor="@color/primary" />
 
         </LinearLayout>
 
@@ -146,24 +146,24 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif"
         android:text="My Children"
         android:textAllCaps="true"
-        android:textStyle="bold"
         android:textColor="@color/black"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="15dp"
-        android:textSize="20dp"/>
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="5dp"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="20dp"
+        android:layout_marginRight="5dp"
         android:paddingBottom="20dp"
         android:scrollbars="vertical" />
-
 
 
 </LinearLayout>

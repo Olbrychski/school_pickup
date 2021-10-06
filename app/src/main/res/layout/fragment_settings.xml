@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white_background"
+        android:background="@color/primary_light"
         android:orientation="vertical">
 
         <TextView
@@ -72,9 +72,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
+                        android:fontFamily="sans-serif"
                         android:text="Edit Personal Info"
                         android:textColor="@color/dark_grey"
-                        android:textSize="14sp" />
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
@@ -97,6 +99,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
             android:text="Location"
             android:textColor="@color/grey"
             android:textSize="15dp"
@@ -112,8 +115,8 @@
                 android:id="@+id/pickup_location_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#1976D2"
                 android:orientation="horizontal"
-                android:background="@color/purple_200"
                 android:paddingTop="20dp"
                 android:paddingBottom="20dp"
                 android:weightSum="3">
@@ -122,11 +125,11 @@
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_weight="0.5"
-                    android:layout_marginRight="10dp"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.5"
                     android:src="@drawable/ic_location_2"
-                    app:tint="@color/white" />
+                    app:tint="@color/black" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -149,9 +152,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
+                        android:fontFamily="sans-serif"
                         android:text="Edit Child's Pick Point"
                         android:textColor="@color/light_grey"
-                        android:textSize="14sp" />
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
@@ -174,6 +179,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
             android:text="Reminder Settings"
             android:textColor="@color/grey"
             android:textSize="15dp"
@@ -200,6 +206,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:drawableTint="@color/primary"
+                    android:fontFamily="sans-serif"
                     android:text="Pick up reminder"
                     android:textColor="@color/black"
                     android:textSize="16dp"
@@ -210,6 +217,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif"
                     android:text="Before 2.0 km"
                     android:textColor="@color/grey"
                     android:textSize="14dp" />
@@ -219,6 +227,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:drawableTint="@color/primary"
+                    android:fontFamily="sans-serif"
                     android:text="Drop reminder"
                     android:textColor="@color/black"
                     android:textSize="16dp"
@@ -229,6 +238,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif"
                     android:text="Before 3.0 km"
                     android:textColor="@color/grey"
                     android:textSize="14dp" />
@@ -243,6 +253,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
             android:text="Notification Alert"
             android:textColor="@color/grey"
             android:textSize="15dp"
@@ -271,6 +282,7 @@
                     android:layout_height="wrap_content"
                     android:buttonTint="@color/primary"
                     android:checked="true"
+                    android:fontFamily="sans-serif"
                     android:text="Pick up notification"
                     android:textColor="@color/black"
                     android:textSize="16dp"
@@ -280,6 +292,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="32dp"
+                    android:fontFamily="sans-serif"
                     android:text="Notify when bus reaches pick up point"
                     android:textColor="@color/grey"
                     android:textSize="13dp" />
@@ -291,6 +304,7 @@
                     android:layout_marginTop="10dp"
                     android:buttonTint="@color/primary"
                     android:checked="true"
+                    android:fontFamily="sans-serif"
                     android:text="Drop notification"
                     android:textColor="@color/black"
                     android:textSize="16dp"
@@ -300,6 +314,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="32dp"
+                    android:fontFamily="sans-serif"
                     android:text="Notify when bus reaches drop point"
                     android:textColor="@color/grey"
                     android:textSize="13dp" />
@@ -311,6 +326,7 @@
                     android:layout_marginTop="10dp"
                     android:buttonTint="@color/primary"
                     android:checked="false"
+                    android:fontFamily="sans-serif"
                     android:text="Reached At School"
                     android:textColor="@color/black"
                     android:textSize="16dp"
@@ -320,6 +336,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="32dp"
+                    android:fontFamily="sans-serif"
                     android:text="Notify when bus reaches at school"
                     android:textColor="@color/grey"
                     android:textSize="13dp" />
@@ -331,6 +348,7 @@
                     android:layout_marginTop="10dp"
                     android:buttonTint="@color/primary"
                     android:checked="false"
+                    android:fontFamily="sans-serif"
                     android:text="Left from school "
                     android:textColor="@color/black"
                     android:textSize="16dp"
@@ -340,6 +358,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="32dp"
+                    android:fontFamily="sans-serif"
                     android:text="Notify when bus left from school"
                     android:textColor="@color/grey"
                     android:textSize="13dp" />
@@ -349,6 +368,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="40dp"
                     android:backgroundTint="@color/primary"
+                    android:fontFamily="sans-serif"
                     android:text="Save" />
 
             </LinearLayout>
@@ -358,11 +378,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:fontFamily="sans-serif"
             android:gravity="center_horizontal"
             android:text="Log Out"
             android:textColor="#D32F2F"
             android:textSize="20dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
     </LinearLayout>
 </ScrollView>

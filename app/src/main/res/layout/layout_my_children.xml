@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:layout_marginBottom="8dp">
+    tools:context=".MainActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -26,18 +25,18 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile_image"
                 android:layout_width="96dp"
+                android:layout_height="96dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="0.2"
-                android:layout_height="96dp"
                 android:src="@drawable/profile"
-                app:civ_border_width="0dp"
-                app:civ_border_color="#FF000000"/>
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="0dp" />
 
             <RelativeLayout
                 android:layout_width="0dp"
-                android:layout_weight="1.8"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="1.8">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -49,6 +48,7 @@
                         android:id="@+id/textview"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
                         android:text="John Doe"
                         android:textColor="@color/black"
                         android:textSize="18dp"
@@ -60,6 +60,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/textview"
                         android:layout_marginTop="5dp"
+                        android:fontFamily="sans-serif"
                         android:text="Rainbow Schools New York"
                         android:textColor="@color/primary"
                         android:textSize="10dp" />
@@ -69,6 +70,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/textview"
+                        android:fontFamily="sans-serif"
                         android:text="Grade 2 North"
                         android:textColor="@color/grey"
                         android:textSize="13sp" />
@@ -78,47 +80,48 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:layout_alignParentBottom="true"
+                    android:orientation="horizontal"
                     android:weightSum="2">
 
                     <TextView
                         android:id="@+id/textViewProgress"
                         android:layout_width="0dp"
-                        android:layout_weight="0.8"
                         android:layout_height="wrap_content"
-                        android:text="At School"
                         android:layout_marginRight="20dp"
-                        android:textStyle="bold"
+                        android:layout_weight="0.8"
+                        android:fontFamily="sans-serif"
+                        android:text="At School"
                         android:textColor="@color/green"
-                        android:textSize="13sp" />
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="1.2"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginRight="3dp"
-                    android:gravity="right">
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/ic_phone"
-                        android:paddingRight="5dp"
-                        app:tint="@color/primary" />
-
-                    <TextView
-                        android:id="@+id/textViewCallDriver"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Call Driver"
-                        android:textColor="@color/grey"
-                        android:textSize="13sp" />
+                        android:layout_marginRight="3dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1.2"
+                        android:gravity="right"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:paddingRight="5dp"
+                            android:src="@drawable/ic_phone"
+                            app:tint="@color/primary" />
 
+                        <TextView
+                            android:id="@+id/textViewCallDriver"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="Call Driver"
+                            android:textColor="@color/grey"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
 
 
                 </LinearLayout>

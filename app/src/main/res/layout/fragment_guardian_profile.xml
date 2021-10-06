@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/primary_light"
     android:orientation="vertical">
 
     <LinearLayout
@@ -20,18 +20,18 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1.8"
-            android:fontFamily="monospace"
-            android:text="Guardians"
+            android:fontFamily="sans-serif"
+            android:text="Parent/Guardians"
             android:textColor="@color/black"
-            android:textSize="25dp"
+            android:textSize="20dp"
             android:textStyle="bold" />
 
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_weight="0.2"
             android:layout_height="match_parent"
             android:layout_marginRight="10dp"
+            android:layout_weight="0.2"
             android:src="@drawable/ic_add"
             app:tint="@color/primary" />
 
