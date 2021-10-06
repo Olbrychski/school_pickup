@@ -20,6 +20,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="@color/white"
+        android:fontFamily="sans-serif"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_main"
         app:itemBackground="@drawable/drawer_menu_item"

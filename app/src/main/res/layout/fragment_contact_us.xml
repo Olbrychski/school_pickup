@@ -2,8 +2,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:background="@color/primary_light"
     android:orientation="vertical">
 
     <LinearLayout
@@ -17,7 +17,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="15dp"
-            android:fontFamily="monospace"
+            android:fontFamily="sans-serif"
             android:text="Contact Us"
             android:textColor="@color/black"
             android:textSize="25dp"
@@ -46,6 +46,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:layout_toRightOf="@id/logo_bus"
+                    android:fontFamily="sans-serif"
                     android:text="Need Help?"
                     android:textColor="@color/black"
                     android:textSize="23dp" />
@@ -57,61 +58,63 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/text1"
-                android:layout_toRightOf="@id/logo_bus"
-                android:text="Connect with us"
                 android:layout_gravity="center_horizontal"
+                android:layout_toRightOf="@id/logo_bus"
+                android:fontFamily="sans-serif"
+                android:text="Connect with us"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_location"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="20dp"
+                android:src="@drawable/ic_location"
                 app:tint="@color/primary" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="267 Julien Streets. Kilimani Road"
+                android:fontFamily="sans-serif"
                 android:gravity="center_horizontal"
-                android:textColor="@color/black"/>
+                android:text="267 Julien Streets. Kilimani Road"
+                android:textColor="@color/black" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_phone"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="20dp"
+                android:src="@drawable/ic_phone"
                 app:tint="@color/teal_700" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="0712333444/ 0110333444"
+                android:fontFamily="sans-serif"
                 android:gravity="center_horizontal"
-                android:textColor="@color/black"/>
+                android:text="0712333444/ 0110333444"
+                android:textColor="@color/black" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_email"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="20dp"
+                android:src="@drawable/ic_email"
                 app:tint="@color/purple_200" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="267 Julien Streets. Kilimani Road"
+                android:fontFamily="sans-serif"
                 android:gravity="center_horizontal"
-                android:textColor="@color/black"/>
+                android:text="267 Julien Streets. Kilimani Road"
+                android:textColor="@color/black" />
 
 
         </LinearLayout>
-
-
 
 
     </LinearLayout>
