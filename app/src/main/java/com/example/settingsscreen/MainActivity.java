@@ -1,11 +1,14 @@
 package com.example.settingsscreen;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -31,19 +34,30 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private ActivityMainBinding binding;
     private DrawerLayout drawer;
 
+    private TextView txtGuardianName, txtGuardianRole;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
+        //Remove status bar
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //if the user is not logged in
+        //starting the login activity
+        if (!SharedPref.getInstance(this).isLoggedIn()) {
+            finish();
+            startActivity(new Intent(this, Login.class));
+        }
+
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+        //getting the current user
+        User user = SharedPref.getInstance(this).getUser();
 
         drawer.setScrimColor(getResources().getColor(android.R.color.transparent));
 
@@ -57,6 +71,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //change nav header text
+        View headerView = navigationView.getHeaderView(0);
+        txtGuardianName = headerView.findViewById(R.id.guardian_name);
+        txtGuardianRole = headerView.findViewById(R.id.guardian_role);
+
+        //setting the values to the textviews
+        txtGuardianName.setText(user.getfName());
+        txtGuardianRole.setText(user.getRole());
 
         displaySelectedScreen(R.id.nav_my_children);
 
