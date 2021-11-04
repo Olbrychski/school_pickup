@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -19,6 +20,8 @@ public class fragmentSettings extends Fragment {
     TextView txtParentName;
     ImageView parentProfileImage;
 
+    private LinearLayout pickupLocationLayout;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -30,6 +33,9 @@ public class fragmentSettings extends Fragment {
             getActivity().finish();
             startActivity(new Intent(getActivity(), Login.class));
         }
+
+        //initialize views
+        pickupLocationLayout = myView.findViewById(R.id.pickup_location_layout);
 
         //get logged in user details from sharedPref
         User user = SharedPref.getInstance(getActivity()).getUser();
@@ -48,6 +54,17 @@ public class fragmentSettings extends Fragment {
             Glide.with(getActivity()).load(R.drawable.icon_profile).into(parentProfileImage);
 
         }
+
+        //go to pickup location activity
+        pickupLocationLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(getActivity(),EditLocationActivity.class);
+                startActivity(intent);
+
+            }
+        });
 
         return myView;
     }
