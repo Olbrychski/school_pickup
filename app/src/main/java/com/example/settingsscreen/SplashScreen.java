@@ -19,6 +19,7 @@ public class SplashScreen extends AppCompatActivity {
 
     Animation topAnim,bottomAnim;
     ImageView image;
+    Intent intent;
     //Textview logo, slogan;
 
     @Override
@@ -42,7 +43,32 @@ public class SplashScreen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashScreen.this,Login.class);
+
+                //if the user is not logged in
+                //starting the login activity
+                if (!SharedPref.getInstance(SplashScreen.this).isLoggedIn()) {
+
+                    intent = new Intent(SplashScreen.this,Login.class);
+                }else{
+
+                    //getting the current user
+                    User user = SharedPref.getInstance(SplashScreen.this).getUser();
+
+                    if (user.getRole().equals("Father") || (user.getRole().equals("Mother"))){
+
+                        intent = new Intent(SplashScreen.this, MainActivity.class);
+
+                    }else if (user.getRole().equals("Driver")){
+
+                        intent = new Intent(SplashScreen.this, DriverHomeActivity.class);
+
+                    }
+
+
+                }
+
+
+                //Intent intent = new Intent(SplashScreen.this,Login.class);
                 Pair[] pairs = new Pair[1];
                 pairs[0] = new Pair<View,String>(image, "logo_image");
                 //pairs[1]= new Pair<View,String>(logo, "logo_text");

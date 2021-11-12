@@ -117,7 +117,7 @@ public class fragmentMyChildren extends Fragment {
     private void getChildren(String parent_id) {
 
         progressDialog = new ProgressDialog(getActivity());
-        progressDialog.setMessage("Loading.Please wait..."); // Setting Message
+        progressDialog.setMessage("Loading..."); // Setting Message
         //progressDialog.setTitle("ProgressDialog"); // Setting Title
         progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER); // Progress Dialog Style Spinner
         progressDialog.show(); // Display Progress Dialog
@@ -142,11 +142,10 @@ public class fragmentMyChildren extends Fragment {
                                 String id = childObject.getString("Id");
                                 String FName = childObject.getString("FName");
                                 String childClass = childObject.getString("Class");
-                                String School = childObject.getString("School");
                                 String ChildPic = childObject.getString("ChildPic");
                                 String AdmissionNo = childObject.getString("AdmissionNo");
 
-                                Child child = new Child(id, FName, childClass, School, ChildPic, AdmissionNo);
+                                Child child = new Child(id, FName, childClass, ChildPic, AdmissionNo);
 
                                 childrenList.add(child);
 

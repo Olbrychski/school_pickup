@@ -42,17 +42,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //Remove status bar
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        //if the user is not logged in
-        //starting the login activity
-        if (!SharedPref.getInstance(this).isLoggedIn()) {
-            finish();
-            startActivity(new Intent(this, Login.class));
-        }
-
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
@@ -125,6 +118,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             case R.id.nav_contact_us:
                 fragment = new fragmentContactUs();
+                break;
+
+            case R.id.nav_sign_out:
+                finish();
+                SharedPref.getInstance(getApplicationContext()).logout();
                 break;
 
         }

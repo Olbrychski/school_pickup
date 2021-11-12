@@ -3,6 +3,7 @@ package com.example.settingsscreen;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,6 +13,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -33,9 +35,11 @@ public class Login extends AppCompatActivity {
     private EditText edtEmail, edtPassword;
     private ProgressBar progressBar;
     private Button btn_login;
+    private TextView txtSignup;
+
+    private ProgressDialog progressDialog;
 
     private static final String URL_LOGIN = "https://safechild.co.ke/safechild/login.php?apicall=";
-
 
 
     @Override
@@ -53,6 +57,7 @@ public class Login extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
         edtEmail = findViewById(R.id.edt_email);
         edtPassword = findViewById(R.id.edt_password);
+        txtSignup = findViewById(R.id.txt_signup);
 
         btn_login = findViewById(R.id.button_login);
 
@@ -65,11 +70,21 @@ public class Login extends AppCompatActivity {
 
             }
         });
+
+        txtSignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(Login.this, SignUpActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
     }
 
     private void userLogin(){
 
-        progressBar.setVisibility(View.VISIBLE);
         //first getting the values
         final String email = edtEmail.getText().toString();
         final String password = edtPassword.getText().toString();
@@ -87,12 +102,19 @@ public class Login extends AppCompatActivity {
             return;
         }
 
+        progressDialog = new ProgressDialog(Login.this);
+        progressDialog.setMessage("Creating Account...");
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER); // Progress Dialog Style Spinner
+        progressDialog.setCancelable(false);
+        progressDialog.show();
+
+
         //Volley request
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_LOGIN + "login", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
 
-                progressBar.setVisibility(View.GONE);
+                progressDialog.dismiss();
 
                 try {
                     //converting response to json object
@@ -104,6 +126,8 @@ public class Login extends AppCompatActivity {
 
                         //getting the user from the response
                         JSONObject userJson = obj.getJSONObject("user");
+
+                        String role = userJson.getString("role");
 
                         //creating a new user object
                         User user = new User(
@@ -120,9 +144,20 @@ public class Login extends AppCompatActivity {
                         //storing the user in shared preferences
                         SharedPref.getInstance(getApplicationContext()).userLogin(user);
 
-                        //starting the profile activity
-                        finish();
-                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        if (role.equals("Driver")){
+
+                            Intent intent = new Intent(Login.this, DriverHomeActivity.class);
+                            finish();
+                            startActivity(intent);
+
+                        }else if (role.equals("Father") || role.equals("Mother")){
+
+                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            finish();
+
+                        }
+
+
                     } else {
 
                         Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();

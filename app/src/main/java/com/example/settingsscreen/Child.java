@@ -2,14 +2,13 @@ package com.example.settingsscreen;
 
 public class Child {
 
-    String id, fName, childClass, school, childPic, admNo;
+    String id, fName, childClass, childPic, admNo;
 
-    public Child(String id, String fName, String childClass, String school,String childPic, String admNo){
+    public Child(String id, String fName, String childClass,String childPic, String admNo){
 
         this.id = id;
         this.fName = fName;
         this.childClass = childClass;
-        this.school = school;
         this.childPic = childPic;
         this.admNo = admNo;
 
@@ -37,14 +36,6 @@ public class Child {
 
     public void setChildClass(String childClass) {
         this.childClass = childClass;
-    }
-
-    public String getSchool() {
-        return school;
-    }
-
-    public void setSchool(String school) {
-        this.school = school;
     }
 
     public String getChildPic() {

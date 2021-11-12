@@ -76,7 +76,6 @@ public class adapterMyChildren  extends RecyclerView.Adapter<adapterMyChildren.E
 
         }
 
-        holder.txtSchool.setText(currentItem.getSchool());
         holder.mTextViewChildName.setText(currentItem.getfName());
         holder.mTextViewChildClass.setText(currentItem.getChildClass());
         holder.txtViewChildStatus.setText(currentItem.getAdmNo());

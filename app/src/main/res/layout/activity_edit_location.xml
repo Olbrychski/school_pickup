@@ -42,6 +42,7 @@
             android:weightSum="6">
 
             <TextView
+                android:id="@+id/lat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -60,6 +61,7 @@
                 android:src="@drawable/map_image" />
 
             <TextView
+                android:id="@+id/longitude"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
