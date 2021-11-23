@@ -55,7 +55,6 @@ import java.util.UUID;
 
 public class DriverHomeActivity extends AppCompatActivity implements LocationListener {
 
-    //a list to store all the products
     private List<DriverChild> childrenList;
 
     //the recyclerview
@@ -106,20 +105,20 @@ public class DriverHomeActivity extends AppCompatActivity implements LocationLis
         driverId = user.getId();
 
         //check if driver has an active trip
-        if (!DriverSharedPref.getInstance(this).hasActiveTrip()) {
+//        if (!DriverSharedPref.getInstance(this).hasActiveTrip()) {
+//
+//            btnStartTrip.setVisibility(View.VISIBLE);
+//            childrenRecyclerView.setVisibility(View.GONE);
+//
+//        } else {
+//
+//            btnStartTrip.setVisibility(View.GONE);
+//
+//            fetchAllChildren(String.valueOf(user.getId()));
+//
+//        }
 
-            btnStartTrip.setVisibility(View.VISIBLE);
-            childrenRecyclerView.setVisibility(View.GONE);
-
-        } else {
-
-            btnStartTrip.setVisibility(View.GONE);
-
-            fetchAllChildren(String.valueOf(user.getId()));
-
-        }
-
-
+        fetchAllChildren(String.valueOf(user.getId()));
         childrenRecyclerView.setHasFixedSize(true);
         childrenRecyclerView.setLayoutManager(new LinearLayoutManager(DriverHomeActivity.this));
 
